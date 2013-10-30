@@ -1,0 +1,105 @@
+/* Basics */
+html, body, main {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.toolbar, .gallery {
+  background: #111;
+  transition: all 500ms;
+}
+button {
+  transition: all 500ms;
+  appearance: none;
+  background: none;
+  border: none;
+  margin: 0;
+}
+
+/* Icons und Buttons */
+@font-face {
+  font-family: 'icons';
+  src: url('assets/font/font/icons.eot?2742526');
+  src: url('assets/font/font/icons.eot?2742526#iefix') format('embedded-opentype'),
+       url('assets/font/font/icons.woff?2742526') format('woff'),
+       url('assets/font/font/icons.ttf?2742526') format('truetype'),
+       url('assets/font/font/icons.svg?2742526#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+button span {
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  color: #C0C0C0;
+}
+button:hover span {
+  color: #FFF;
+}
+button.settings span:before { content: '\e800'; } /* Zahnrad */
+button.effects span:before { content: '\e801'; }  /* Zauberey */
+button.mode span:before { content: '\e804'; }     /* Aufnahmemodus */
+button.flash span:before { content: '\e802'; }    /* Blitz */
+button.camera span:before { content: '\e803'; }   /* Kamera-Wahl */
+button.face span:before { content: '\e806'; }     /* Gesichtserkennung */
+button.snap span:before { content: '\e805'; }     /* Foto machen! */
+button.video span:before { content: '\e807'; }    /* Video aufnehmen */
+
+/* Sonderfall Foto-Button */
+button.snap {
+  position: relative;
+}
+button.snap span {
+  position: absolute;
+  top: 0.25em;
+  left: 0.25em;
+  right: 0.25em;
+  bottom: 0.25em;
+  border-radius: 1em;
+  background: #222;
+  border: 0.1em solid #333;
+}
+
+
+/* Katzenbilder */
+.photo {
+  background: url(assets/2.jpg) center center / cover no-repeat;
+}
+.gallery div {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 0.1em solid #000;
+  opacity: 0.65;
+  transition: opacity 500ms;
+}
+.gallery div:hover {
+  opacity: 1;
+}
+.gallery div:nth-child(1) { background-image: url(assets/1.jpg); }
+.gallery div:nth-child(2) { background-image: url(assets/3.jpg); }
+.gallery div:nth-child(3) { background-image: url(assets/4.jpg); }
+.gallery div:nth-child(4) { background-image: url(assets/5.jpg); }
+.gallery div:nth-child(5) { background-image: url(assets/6.jpg); }
+
+
+/*
+  Ab hier weiter machen!
+  ======================
+*/
+
+html {
+  font-size: 32px;
+}
+
+.photo {
+  width: 500px;
+  height: 500px;
+}
+
+.gallery div {
+  height: 80px;
+  width: 80px;
+}
