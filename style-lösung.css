@@ -1,6 +1,5 @@
 /* Basics */
 html, body, main {
-  font-size: 1vmin;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -30,12 +29,10 @@ button {
   font-style: normal;
 }
 button span {
-  font-size: 5.75rem;
   font-family: 'icons';
   font-style: normal;
   font-weight: normal;
   speak: none;
-  line-height: 1em;
   color: #C0C0C0;
 }
 button:hover span {
@@ -55,9 +52,6 @@ button.snap {
   position: relative;
 }
 button.snap span {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   position: absolute;
   top: 0.25em;
   left: 0.25em;
@@ -96,6 +90,15 @@ button.snap span {
   ======================
 */
 
+
+/* Schrift- bzw. Icon-Größe */
+html {
+  font-size: 1vmin;
+}
+button span {
+  font-size: 5.75rem;
+}
+
 /* Basis-Anordnung mit Flexbox */
 main {
   display: flex;
@@ -121,6 +124,11 @@ main {
 }
 .toolbar button.snap {
   flex-grow: 3;
+}
+button.snap span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Bilder in der Galerie */
