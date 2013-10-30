@@ -18,7 +18,7 @@ button {
   margin: 0;
 }
 
-/* Icons */
+/* Icons und Buttons */
 @font-face {
   font-family: 'icons';
   src: url('assets/font/font/icons.eot?2742526');
@@ -36,7 +36,7 @@ button span {
   font-weight: normal;
   speak: none;
   line-height: 1em;
-  color: #CCC;
+  color: #C0C0C0;
 }
 button:hover span {
   color: #FFF;
@@ -49,11 +49,15 @@ button.camera span:before { content: '\e803'; }   /* Kamera-Wahl */
 button.face span:before { content: '\e806'; }     /* Gesichtserkennung */
 button.snap span:before { content: '\e805'; }     /* Foto machen! */
 button.video span:before { content: '\e807'; }    /* Video aufnehmen */
+
+/* Sonderfall Foto-Button */
 button.snap {
   position: relative;
 }
 button.snap span {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 0.25em;
   left: 0.25em;
